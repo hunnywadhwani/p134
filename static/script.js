@@ -9,10 +9,11 @@ $(document).ready(function() {
 
 
     //  write an event, when Submit button is clicked
-    $('').click(function() {
+    $('#submitButton').click(function() {
 
         //  get the text value from the textarea using the 'val()' method
-        let text_value = $('').val()
+        let text_value = $('#text').val();
+
 
         //  Convert it to JS object.
         //  Provide a 'key' here and in write the same in app.py file as well to extract data
