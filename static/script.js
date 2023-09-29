@@ -5,15 +5,14 @@ $(document).ready(function() {
     //  Fetch the current date and update it in the DOM
     var date = new Date()
     let display_date = "Date:" + date.toLocaleDateString()
-
+    $('#date').html(display_date)
 
 
     //  write an event, when Submit button is clicked
-    $('#submitButton').click(function() {
+    $('button').click(function() {
 
         //  get the text value from the textarea using the 'val()' method
-        let text_value = $('#text').val();
-
+        let text_value = $('text').val()
 
         //  Convert it to JS object.
         //  Provide a 'key' here and in write the same in app.py file as well to extract data
@@ -43,11 +42,11 @@ $(document).ready(function() {
 
 
 
-                $("#prediction").html(predicted_emotion)
-                $('#prediction').css("display", "block");
+                $("#sentiment").html(predicted_emotion)
+                $('#sentiment').css("display", "block");
 
-                $("#emo_img_url").attr('src', emo_url);
-                $('#emo_img_url').css("display", "block");
+                $("#emoji").attr('src', emo_url);
+                $('#emoji').css("display", "block");
 
 
 
